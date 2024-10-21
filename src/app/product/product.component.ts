@@ -11,39 +11,12 @@ import { SearchBarComponent } from "../search-bar/search-bar.component";
 })
 export class ProductComponent {
 
-  cartItem: any[] = []
   count: number = 0
-  count2: number = 1
-  search= ''
-  recherche=''
-
-  products = [
-    {
-      id: 1,
-      name: 'Iphone XR',
-      price: 600
-    },
-    {
-      id: 2,
-      name: 'Samsung Galaxy',
-      price: 500
-    },
-    {
-      id: 3,
-      name: 'Nokia',
-      price: 200
-    },
-  ]
-
-  increaseCount(){
-    this.count ++
-  }
-  rechercheIncrease(){
-    this.count2++
+  recherche = ''
+  messageFromChild(){
+    this.count++
   }
 
-  onProductAddedToCart(product: any){
-      console.log('product added to cart: ' + product.name);
-      this.cartItem.push(product)
-  }
+  
+
 }

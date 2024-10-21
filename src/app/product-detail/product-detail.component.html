@@ -1,6 +1,5 @@
-<div id="productDetail">
-    <h1>{{product.name}}</h1>
-    <h2>{{product.price + ' FG'}}</h2>
-</div>
 
-<button (click)="onAddToCart()">Add To cart</button>
+
+<input placeholder="Message to parent" [ngModel]="search" (ngModelChange)="updateChange($event)"  />
+
+<button (click)="sendMessage()">Envoi</button>
