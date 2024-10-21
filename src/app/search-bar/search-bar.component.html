@@ -1,0 +1,9 @@
+<div id="search-bar"> 
+   <input placeholder="Search...." [ngModel]="search" (ngModelChange)="updateSearch($event)" />
+   <button (click)="searchClick()">Click</button>
+</div>
+
+<div id="search-bar2">
+   <input placeholder="Recherche..." [ngModel]="recherche" (ngModelChange)="updateRecherche($event)" />
+   <button (click)="rechercheClick()">recherche</button>
+</div>
