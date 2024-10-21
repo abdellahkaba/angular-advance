@@ -10,16 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductDetailComponent {
 
-  @Input() search = 'initial'
-  @Output() messageForParent = new EventEmitter()
-  @Output() searchChange = new EventEmitter<string>();
+  @Input() product: any
+  @Output() addToCart = new EventEmitter<any>()
 
-
-  updateChange(message: string) {
-      this.searchChange.emit(message)
-  }
-
-  sendMessage() {
-    this.messageForParent.emit()
+  onAddToCart() {
+    this.addToCart.emit(this.product)
   }
 }

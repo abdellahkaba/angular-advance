@@ -1,5 +1,5 @@
-
-
-<input placeholder="Message to parent" [ngModel]="search" (ngModelChange)="updateChange($event)"  />
-
-<button (click)="sendMessage()">Envoi</button>
+<div id="productDetail">
+    <h2>{{product.name}}</h2>
+    <span>{{product.price}}</span>
+</div>
+<button (click)="onAddToCart()">Add To cart</button>

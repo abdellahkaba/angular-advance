@@ -8,4 +8,12 @@
   "
 >
   <app-product  ></app-product>
+  <br />
+  <hr />
+
+  <div>
+    @for (categorie of category; track categorie.id) {
+      <app-category [categorie]="categorie" />
+    }
+  </div>
 </div>

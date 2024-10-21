@@ -1,13 +1,14 @@
 
 
-<app-product-detail
-  (messageForParent)="messageFromChild()"
-  [search]="recherche"
-  (searchChange)="recherche = $event"
- />
+<!-- <app-product-detail
+ /> -->
 
- Search : {{recherche}}
- compteur : {{count}}
+@for (product of products; track product.id) {
+  <app-product-detail [product]="product"
+  (addToCart)="onProductAddToCart($event)"
+  />
+}
+
 
 
 
